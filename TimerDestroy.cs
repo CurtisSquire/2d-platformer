@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimerDestroy : MonoBehaviour
 {
+//this class was created to make sure that bullets the player shoots will destroy themselves after some time has passed.
     [SerializeField] float timer;
 
     private void Start()
