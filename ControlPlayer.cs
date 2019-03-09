@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlPlayer : MonoBehaviour
 {
+//Here is where I set up the player controler. 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speed;
     [SerializeField] float gravityMult;
@@ -30,6 +31,7 @@ public class ControlPlayer : MonoBehaviour
             onGround = true;
         }
     }
+    //this controls the players movement. 
     private void Movement(float horizontal)
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);  
@@ -38,12 +40,13 @@ public class ControlPlayer : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal"); 
         Movement(horizontal); 
+        //controls the player jumping. 
         if (Input.GetKeyDown(KeyCode.W) && onGround)
         {
             onGround = false;
             rb.AddForce(new Vector2(rb.velocity.x, jumpValue));
         }
-
+         //allows the player to shoot every few seaconds when space is pressed. 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > shootingTimer)
         {
             shootingTimer = Time.time + rateOfFire;
