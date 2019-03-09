@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+//This is my main enemy script where my enemy class is created with methods that different types of enemies can inherit from. 
+//what methods Igive them depends on the type of enemy
     public Rigidbody2D rb;
     public bool isFacingRight;
     public bool onGround;
