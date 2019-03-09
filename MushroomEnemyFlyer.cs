@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MushroomEnemyFlyer : Enemy
 {
+//This enemy is the same as the last one but is able to fly up and down rather than move left and right. 
     private void Update()
     {
         FlyMove();
