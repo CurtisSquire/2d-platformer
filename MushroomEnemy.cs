@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement; 
 using UnityEngine;
+//creats Mushroom enemy class witch inherits from enemy class. This enemy walks between two points and changes direction 
+//when they hit one point. 
 
 public class MushroomEnemy : Enemy
 {
